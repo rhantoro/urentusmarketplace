@@ -1,0 +1,148 @@
+.red {
+	color: red;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;	
+}
+
+.custom-form-inline div {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.custom-form-inline label{
+	padding-top: 7px;
+}
+
+.metro input[type="submit"] .btn.btn-default {
+	background-color: #E5E5E5;
+}
+
+a.btn-primary {
+	color: #FFF;
+}
+
+.pagination {
+	margin-top: 0;
+}
+
+.table {
+	margin-bottom: 8px;
+}
+
+.merged .input-group-addon {
+    background-color: #FFFFFF;
+}
+.merged input {
+    background-color: #FFFFFF;
+}
+.focusedInput {
+    border-color: rgba(82,168,236,.8) ;
+    outline: 0;
+    outline: thin dotted \9;
+}
+
+.radio.merged {
+	display: inline-block;
+    line-height: 24px;
+    margin-right: 20px;
+}
+
+.input-group-addon {
+	cursor: pointer;
+}
+
+.icon-button {
+	float: left;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#destinations .destination_remove {
+	float: left;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+#multiple_trip {
+	margin-bottom: 17px;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+#image-loading {
+    line-height: 1000px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0.4;
+    background: none repeat scroll 0 0 #808080;
+}
+
+#image-loading > helper {
+	border: 2px solid red;
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#image-loading > img {
+	vertical-align: middle;
+	position: fixed;
+}
+
+table.dataTable tr.highlighted, table.dataTable tr.highlighted > td.sorting_1 {
+	background-color: yellow;
+	cursor: pointer;
+}
+
+table.dataTable tr.selected, table.dataTable tr.selected > td.sorting_1 {
+	background-color: red;	
+}
+
+.btn-default {
+	background: #CCCCCC;
+}
+
+#flight_search_result_container table.dataTable thead th {
+	padding: 8px;
+}
+
+.table thead > tr > th, .table tbody > tr > td  {
+	white-space: nowrap;
+}
+	
+.table thead > tr > th {
+	vertical-align: middle;
+}
+
+.rounded {
+	border: 5px solid #DDF5F7; 
+	border-radius:10px;
+	padding: 20px;
+	height: 150px;
+}
+
+.rounded.flexi {
+	height: auto;
+}
+
+.widget-title {
+  	background: url("../images/dots.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+    margin: 5px 0 16px;
+    padding-bottom: 16px;
+    width: 100%;
+}
