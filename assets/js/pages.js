@@ -25,7 +25,7 @@ $(document).ready(function() {
 		};
 		};
 		
-		$.getJSON(config.siteURL + "/category/getalldata/", function(data){
+		$.getJSON(config.siteURL + "category/getalldata/", function(data){
 			var items = [];
 		    $.each(data.data, function (key,val) {
 		        items.push(val['categorycode']);		        
@@ -46,7 +46,7 @@ $(document).ready(function() {
 				);
 		});
 		
-		$.getJSON(config.siteURL + "/brand/getalldata/", function(data){
+		$.getJSON(config.siteURL + "brand/getalldata/", function(data){
 			var items = [];
 		    $.each(data.data, function (key,val) {
 		        items.push(val['brandcode']);		        
@@ -67,7 +67,7 @@ $(document).ready(function() {
 				);
 		}); 
 		
-		$.getJSON(config.siteURL + "/location/getallprovince/", function(data){
+		$.getJSON(config.siteURL + "location/getallprovince/", function(data){
 			var items = [];
 		    $.each(data.data, function (key,val) {
 		        items.push(val['provincecode']);		        

@@ -14,12 +14,12 @@ $('#submit').click(function() {
 	logintype = $('#logintype').val();
 			
 	$.ajax({
-		url: config.siteURL + "/users/login/",
+		url: config.siteURL + "users/login/",
 		data: "emailaddress="+emailaddress+"&password="+password+"&logintype="+logintype,
 		type: 'post',
 		success: function(result) {			
 			if (result) {				
-				document.location.href = config.siteURL+"/pages/dashboarduser";
+				document.location.href = config.siteURL+"pages/dashboarduser";
 			} else {
 				$('#msg').html("Email Address and Password is wrong");				
 			}		
