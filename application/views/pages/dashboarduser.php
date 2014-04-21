@@ -1,0 +1,2 @@
+<div class="login-box kan"><a href="<?php echo site_url('company/accountdetail'); ?>">Company Detail</a></div>
+<div class="login-box kan"><a href="<?php echo site_url('users/accountdetail'); ?>">Account Detail</a></div>

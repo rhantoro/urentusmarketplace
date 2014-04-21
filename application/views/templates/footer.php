@@ -4,7 +4,7 @@
 		<div class="container">
 			<a href="#top" id="back-top" style=""><i class="icon-arrow-up"></i>Top</a>
 			<div class="footer-inner">
-				2013 &copy; Mitra Solusi Telematika.
+				2014 &copy; PT UrentUs Media Digital
 			</div>
 			<div class="footer-tools" style="display:none;">
 				<span class="go-top"><i class="icon-angle-up"></i></span>

@@ -15,7 +15,7 @@ h2, h3 {
 .metro .navbar-inverse, 
 .metro .navbar-default
 {
-    background-color: #00737E;
+    background-color: #F5F5F5;
     border-color:#98B688;
     box-shadow: 0 1px 10px rgba(0,0,0,0.4);
     -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.4);
@@ -57,7 +57,7 @@ border-radius: 4px;
     background: none;
 }
 .metro .navbar-nav li.user a {
-    color: #fff;
+    color: #000;
 }
 .metro .navbar-nav li.user.open a {
     color: #777;

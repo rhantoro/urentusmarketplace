@@ -4,8 +4,9 @@
 	<title><?php echo !empty($title)? $title : 'UrentUs Market Place';  ?> - UrentUs Market Place</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="<?php echo asset_url("images/favicon.png"); ?>">
-	
+	<link href="<?php echo asset_url('css/custom.css'); ?>" rel="stylesheet" type="text/css" media="screen" />	
     <!-- Bootstrap -->
+    
     <link href="<?php echo asset_url('jquery-ui/themes/smoothness/jquery-ui.min.css'); ?>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<?php echo asset_url('css/bootstrap.min.css'); ?>" rel="stylesheet" type="text/css" media="screen" />
     <link href="<?php echo asset_url('css/bootstrap-modal-bs3patch.css'); ?>" rel="stylesheet" type="text/css" media="screen" />
@@ -19,7 +20,7 @@
     <link href="<?php echo asset_url('css/datepicker.css'); ?>" rel="stylesheet" type="text/css" media="screen" />	
     <link href="<?php echo asset_url('/css/jquery.dataTables.css'); ?>" rel="stylesheet" type="text/css">
     
-	<link href="<?php echo asset_url('css/custom.css'); ?>" rel="stylesheet" type="text/css" media="screen" />	
+	
 	
     <!--[if lt IE 9]>
       <script type="text/javascript" src="<?php echo asset_url('js/html5shiv.js'); ?>"></script>
@@ -36,13 +37,14 @@
     <script type="text/javascript" src="<?php echo asset_url('/js/twitter-bootstrap-hover-dropdown.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.cookie.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/Mod.js');?>"></script>
-	<script type="text/javascript" src="<?php echo asset_url('/js/mobile-menu.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/typeahead.js');?>"></script>
+	<!-- <script type="text/javascript" src="<?php echo asset_url('/js/mobile-menu.js');?>"></script> -->
 	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-tabdrop.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.dataTables.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery-dateFormat.min.js');?>"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-			 $('#main-nav').mobileMenu();
+			 //$('#main-nav').mobileMenu();
 		});
 		var config = {
 		     baseURL: "<?php echo base_url(); ?>",
@@ -51,7 +53,8 @@
 			 csrf_cookie_name: "<?php echo $this->config->item("csrf_cookie_name"); ?>"
 		 };
 	</script>
-    <script type="text/javascript" src="<?php echo asset_url('/js/custom.js');?>"></script>
+    <!--  <script type="text/javascript" src="<?php echo asset_url('/js/custom.js');?>"></script> -->
+    
 </head>
 <body class="metro" id="top">
 	<div class="navbar header navbar-default navbar-static-top">
@@ -64,7 +67,7 @@
 						<span class="icon-bar">	</span>
 					</button>
 					
-					<a class="navbar-brand visible-sm visible-md visible-lg">C A S T</a>
+					<a class="navbar-brand visible-sm visible-md visible-lg">UrentUs</a>
 					<?php if ($this->session->userdata('loggedin')): ?>
 						<a class="navbar-brand visible-xs">C A S T</a>
 						<ul class="nav navbar-nav pull-right">						
@@ -97,8 +100,8 @@
 		<div class="container">
 			<ul class="nav navbar-nav pull-left" id="main-nav">
 	<?php 
-		$menus = $this->session->userdata('menus');
-		echo generate_menus($menus); 
+		//$menus = $this->session->userdata('menus');
+		//echo generate_menus($menus); 
 	?>	
 			</ul>
 		</div>
