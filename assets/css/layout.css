@@ -459,4 +459,5 @@ padding: 4px 6px;
 .navlist {
     margin-top:5px;
     padding:5px 5px;
+    display:inline-block;
 }
