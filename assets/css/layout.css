@@ -85,6 +85,11 @@ text-shadow: 0 1px 1px rgba(0,0,0,0.4);
 /**
 HEADER PROPERTIES
 **/
+.header {
+    display: block;
+    height: 70px;
+    position: relative;
+}
 .header-inner {
     position: relative;
 }
@@ -441,4 +446,17 @@ padding: 4px 6px;
     top: 0px;
  
     }
+}
+
+.brand {
+    background: none repeat scroll 0 0 transparent;
+    float: left;
+    
+    position: relative;
+    width: 240px;
+}
+
+.navlist {
+    margin-top:5px;
+    padding:5px 5px;
 }

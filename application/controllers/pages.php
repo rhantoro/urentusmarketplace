@@ -14,7 +14,7 @@ class Pages extends CI_Controller {
 	
 	public function index() {
 		$this->load->view('templates/header');
-		$this->load->view('templates/quicksearch');
+		//$this->load->view('templates/quicksearch');
 		$this->load->view('pages/index');
 		$this->load->view('templates/footer');		
 	}

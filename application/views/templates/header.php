@@ -59,8 +59,30 @@
 <body class="metro" id="top">
 	<div class="navbar header navbar-default navbar-static-top">
 		<div class="container">
-			<div class="navbar-header">
+			<div class="header">
 				<div class="header-inner">
+                    <div class="brand">
+                        <img src="assets/images/logo.png">
+                    </div>
+                    
+                    <div class="menu pull-right">
+                        <ul class="navlist list-inline">
+                            <li><a href="">Bergabung menjadi member</a></li>
+                            <li><a href="">Login member</a></li>
+                            <li><a href="">Site map</a></li>
+                        </ul>
+                    </div>
+                    
+                    <br />
+                    
+                    <div class="menu pull-right" style="position:absolute;top:30px;right:0">
+                        <ul class="navlist list-inline">
+                            <li>Customer Service: </li>
+                            <li><a href="">Anisa</a></li>
+                            <li><a href="">Indah</a></li>
+                        </ul>
+                    </div>
+                
 					<button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target=".navbar-collapse">
 						<span class="icon-bar">	</span>
 						<span class="icon-bar">	</span>
