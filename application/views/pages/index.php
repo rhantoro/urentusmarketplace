@@ -287,8 +287,13 @@ color:white; font-size: 16px;   font-weight: 300; letter-spacing: 0; padding:5px
 		
 	</div>
 	<div class="login-box kan">
-		<a href="<?php echo site_url('pages/loginform'); ?>">Login Administrator</a>
-		
+		<a href="<?php echo site_url('pages/loginform'); ?>">Login Administrator</a>		
+	</div>
+	<div class="login-box kan">
+		<a href="<?php echo site_url('pages/registerrenter'); ?>">Register Renter</a>		
+	</div>
+	<div class="login-box kan">
+		<a href="<?php echo site_url('pages/registerrentee'); ?>">Register Rentee</a>		
 	</div>
 </div>
 <div class="col-md-2">

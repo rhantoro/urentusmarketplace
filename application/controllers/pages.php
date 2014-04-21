@@ -32,6 +32,19 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function registerrenter() {
+		$this->load->view('templates/header');
+		$this->load->view('templates/quicksearch');
+		$this->load->view('pages/loginform');
+		$this->load->view('templates/footer');
+	}
+	
+	public function registerrentee() {
+		$this->load->view('templates/header');		
+		$this->load->view('pages/loginform');
+		$this->load->view('templates/footer');
+	}
+	
 	public function contact() {
 		//@todo complate this method
 		$this->load->view('templates/header');
