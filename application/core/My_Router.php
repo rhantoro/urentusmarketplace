@@ -1,7 +1,7 @@
 <?php class MY_Router extends CI_Router { 
 function set_class($class) 
 {
-    $this->class = str_replace('-', '_', $class);
+    $this->class = str_replace('-', '_', $class);  
 }
 
 function set_method($method) 

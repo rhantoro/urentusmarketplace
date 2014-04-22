@@ -4,7 +4,7 @@
     <div class="listing ">
     <div class="promo-nav f10 kan"><ul><li><a href="http://www.tokobagus.com/halaman/help/promo.html?promosikan-iklan-anda">Promosikan iklan anda</a></li></ul></div><div class="clr"></div>            <div class="listingbox " data-id-navigation="listing" style="cursor: pointer;">
                 <div class="item-time kir"><div class="ico tgl kir"></div>11 menit lalu</div>
-                <div class="foto-wrapper">
+                <div class="foto-wrapper"> 
                     <div class="fotobox ">                                                
                                                      
                         <div class="fotoborder"></div><img alt="Ertiga Gl" src="http://im4.tokobagus.biz/s/51/54/51035544_10946479_5355f2226d4d3_list.jpg" class="fotoimage">
