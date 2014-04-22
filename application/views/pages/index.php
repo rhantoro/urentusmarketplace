@@ -249,6 +249,7 @@
     </div>
     </div>
 </div>
+
 <!-- feature -->
 
 
@@ -269,6 +270,26 @@
             <div class="col-md-3"></div>
         </div>
     </div>
+
+<div class="col-md-2">
+	<div class="login-box kan">
+		<a href="<?php echo site_url('pages/loginform'); ?>">Login</a>
+		
+	</div>
+	<div class="login-box kan">
+		<a href="<?php echo site_url('pages/loginform'); ?>">Login Administrator</a>		
+	</div>
+	<div class="login-box kan">
+		<a href="<?php echo site_url('pages/registerrenter'); ?>">Register Renter</a>		
+	</div>
+	<div class="login-box kan">
+		<a href="<?php echo site_url('pages/registerrentee'); ?>">Register Rentee</a>		
+	</div>
+</div>
+<div class="col-md-2">
+	<input class="form-control btn btn-primary" type="submit" name="submit" value="Register">
+</div>
+<!-- end -->
 </div>
 
 

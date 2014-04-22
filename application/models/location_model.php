@@ -32,4 +32,23 @@ class Location_model extends CI_Model {
 		return $returnValue;
 	}
 	
+	public function getAllCityByProvince($province=null) {
+		$orderBy = "citycode asc";
+	
+		$allRows = $this->db->count_all_results('city');
+	
+		$this->db->select('citycode')
+		->from('city')
+		->order_by($orderBy)
+		->where(array('provincecode' => $province));
+	
+		$query = $this->db->get();
+		
+		$returnValue = array(
+				'data' => $query->result(),
+				'count_all' => $allRows
+		);
+	
+		return $returnValue;
+	}
 }

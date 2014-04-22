@@ -3,6 +3,13 @@ class Pages extends CI_Controller {
 
 	public function __construct() {
 		parent::__construct();
+		$this->load->model('users_model');
+		$this->load->helper('security');
+		$this->load->helper('download');
+		$this->load->helper('form');
+		$this->load->helper('date');
+		$this->load->library('pagination');
+		$this->load->library('form_validation');
 	}
 
 	public function loginform() {
@@ -32,6 +39,19 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function registerrenter() {
+		$this->load->view('templates/header');
+		//$this->load->view('templates/quicksearch');
+		$this->load->view('company/companyregister');
+		$this->load->view('templates/footer');
+	}
+	
+	public function registerrentee() {
+		$this->load->view('templates/header');		
+		$this->load->view('pages/loginform');
+		$this->load->view('templates/footer');
+	}
+	
 	public function contact() {
 		//@todo complate this method
 		$this->load->view('templates/header');
