@@ -491,3 +491,8 @@ padding: 4px 6px;
 #main-nav > li {
     display: inline-block;
 }
+#feature-wrap {
+    margin-left:-30px;
+    margin-right:-30px;
+    
+}

@@ -172,6 +172,7 @@
 <!-- video -->
 <div class="row">
     <div class="">
+      <h4 class="section-title">Video</h4>
       <div class="box-1 add_top_15">
     
         <div class="li col-md-6 animated flipInX" style="display: inline-block;">
@@ -196,8 +197,9 @@
 <!-- video -->
 
 <!-- feature -->
-<div class="row add_top_15">
-    <div class="">
+<div class="row add_top_15" id="feature-wrap">
+    <div class="col-md-12">
+    <h4 class="section-title">Feature</h4>
       <div class="box-1 ">
     
         <div class="li col-md-4 animated flipInX" style="display: inline-block;">
