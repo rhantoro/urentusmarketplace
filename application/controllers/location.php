@@ -20,5 +20,16 @@ class Location extends CI_Controller {
 		$this->output->set_content_type('application/json')->set_output(json_encode($output));
 	}
 	
+	public function getcitybyprovince($province=null) {
+		$province = urldecode($province);
+		$result = $this->location_model->getAllCityByProvince($province);
+		$output['message'] = '';
+		if ($result['count_all'] == 0) {
+			$output['message'] = __("No data found");
+		}
+		$output['data'] = $result['data'];
+		
+		$this->output->set_content_type('application/json')->set_output(json_encode($output));
+	}
 	
 }
