@@ -9,7 +9,7 @@ class Company extends CI_Controller {
 		$this->load->helper('download');
 	}
 	
-	public function accountdetail() {
+	public function account_detail() {
 		$this->load->helper('form');
 		$this->load->helper('date');
 		$this->load->library('pagination');

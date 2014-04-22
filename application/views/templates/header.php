@@ -58,7 +58,7 @@
 </head>
 <body class="metro" id="top">
 	<div class="navbar header navbar-default navbar-static-top">
-		<div class="container">
+     	<div class="container">
 			<div class="header">
 				<div class="header-inner">
                     <div class="brand">
@@ -67,9 +67,9 @@
                     
                     <div class="menu pull-right">
                         <ul class="navlist list-inline">
-                            <li><a href="">Bergabung menjadi member</a></li>
-                            <li><a href="">Login member</a></li>
-                            <li><a href="">Site map</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="">Bergabung menjadi member</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="">Login member</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="">Site map</a></li>
                         </ul>
                     </div>
                     

@@ -1,6 +1,176 @@
 		</div>
 	</div>
-	<div class="footer" id="footer">
+    <div class="footer-container add_top_30" id="footer-container">
+    
+    	<div class="footer-inner alt">
+    		<div class="container">
+    		
+    			<div class="row">
+    				
+    				<!-- WIDGET: ABOUT US -->
+    				<div class="col-xs-12 col-sm-6 col-lg-3">
+    					<div class="widget widget-text">
+    						<h4 class="widget-header section-title">About Urentus</h4>
+    						<div class="widget-inner">
+    							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat., conse
+    							adipiscing elit. Donec in sagittis sem. 
+    							Aliquam vitae egestas odio [...] </p>
+    							<p>Pellentesque habitant morbi tristiq
+    							senectus et netus. Proin ornare nisl at 
+    							enim vestibulum [...]</p>
+    						
+    						</div>
+    					</div>
+    					<div class="space40 hidden-lg"></div>
+    				</div>
+    				<!-- /WIDGET: ABOUT US -->
+    
+    				<div class="col-xs-12 col-sm-12 hidden-lg"></div>
+    				
+    				<!-- WIDGET: TWITTER FEED -->
+    				<div class="col-xs-12 col-sm-6 col-lg-3">
+    					<div class="widget widget-text">
+    						<h4 class="widget-header section-title">Partners</h4>
+    						<div class="widget-inner">
+    							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat., conse
+    							adipiscing elit. Donec in sagittis sem. 
+    							Aliquam vitae egestas odio [...] </p>
+    							<p>Pellentesque habitant morbi tristiq
+    							senectus et netus. Proin ornare nisl at 
+    							enim vestibulum [...]</p>
+    						
+    						</div>
+    					</div>
+    					<div class="space40 hidden-lg"></div>
+    				</div>
+    				
+    				
+    				<div class="col-xs-12 col-sm-6 col-lg-3">
+    					<div class="widget widget-text">
+    						<h4 class="widget-header section-title">Terms & Conditions</h4>
+    						<div class="widget-inner">
+    							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat., conse
+    							adipiscing elit. Donec in sagittis sem. 
+    							Aliquam vitae egestas odio [...] </p>
+    							<p>Pellentesque habitant morbi tristiq
+    							senectus et netus. Proin ornare nisl at 
+    							enim vestibulum [...]</p>
+    						
+    						</div>
+    					</div>
+    					<div class="space40 hidden-lg"></div>
+    				</div>
+    				
+    			
+    				
+    				<div class="col-xs-12 col-sm-6 col-lg-3">
+    					<div class="widget widget-text">
+    						<h4 class="widget-header section-title">Privacy Policy</h4>
+    						<div class="widget-inner">
+    							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat., conse
+    							adipiscing elit. Donec in sagittis sem. 
+    							Aliquam vitae egestas odio [...] </p>
+    							<p>Pellentesque habitant morbi tristiq
+    							senectus et netus. Proin ornare nisl at 
+    							enim vestibulum [...]</p>
+    						
+    						</div>
+    					</div>
+    					<div class="space40 hidden-lg"></div>
+    				</div>
+    				<!-- /WIDGET: CONTACT US -->
+    				
+    			</div>
+    		
+    		</div>
+    	</div>
+    	
+    	<div class="footer-inner main">
+    		<div class="container">
+    		
+    			<div class="row">
+    
+    				<!-- WIDGET LINKS -->
+    				<div class="col-xs-6 col-sm-3 col-lg-3">
+    					<div class="widget wdgt-linklist">
+    						<div class="widget-inner">
+    							<h4 class="widget-header section-title">INFORMATION</h4>
+    							<ul class="list-unstyled">
+    								<li><a href="#"> About Us</a></li>
+    								<li><a href="#"> Delivery Information</a></li>
+    								<li><a href="#"> Privacy Policy</a></li>
+    								<li><a href="#"> Terms &amp; Conditions</a></li>
+    								<li><a href="#"> Contact </a></li>
+    								
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				<div class="col-xs-6 col-sm-3 col-lg-3">
+    					<div class="widget wdgt-linklist">
+    						<div class="list-unstyled">
+    							<h4 class="widget-header section-title">CUSTOMER SERVICE</h4>
+    							<ul class="list-unstyled">
+    								<li><a href="#"> Site Map</a></li>
+    								<li><a href="#"> Contact</a></li>   								
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				<div class="col-xs-6 col-sm-3 col-lg-3">
+    					<div class="widget wdgt-linklist">
+    						<div class="widget-inner">
+    							<h4 class="widget-header section-title">EXTRAS</h4>
+    							<ul class="list-unstyled">
+    								<li><a href="#"> Rental News</a></li>
+                                    <li><a href="#"> Rental Jobs</a></li>
+                                    <li><a href="#"> Rental Community</a></li>
+                                    <li><a href="#"> Rental Consultation</a></li>    								
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    				
+    				<div class="col-xs-6 col-sm-3 col-lg-3">
+    					<div class="widget wdgt-linklist">
+    						<div class="widget-inner">
+    							<h4 class="widget-header section-title">MY ACCOUNT</h4>
+    							<ul class="list-unstyled">
+    								<li><a href="<?php echo site_url('pages/login-form'); ?>"> Login</a></li>
+    								<li><a href="<?php echo site_url('pages/login-form'); ?>"> Login Administrator</a></li>
+    								<li><a href="<?php echo site_url('pages/register-renter'); ?>"> Register Renter</a></li>
+    								<li><a href="<?php echo site_url('pages/register-rentee'); ?>"> Register Rentee</a></li>
+    							</ul>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		
+    		</div>
+    	</div>
+    	
+    	<div class="footer-powered">
+    		<div class="container">
+    		
+    			<div class="row">
+    			
+    				<div class="col-xs-12 col-sm-6 copyright center-sm">
+    					2014 &copy; PT UrentUs Media Digital
+    				</div>
+    				
+    				<div class="col-xs-12 space10 visible-xs"></div>
+    		
+    			</div>
+    			
+    		</div>
+    	</div>
+    	
+    </div>
+    
+	<!--
+<div class="footer" id="footer">
 		<div class="container">
 			<a href="#top" id="back-top" style=""><i class="icon-arrow-up"></i>Top</a>
 			<div class="footer-inner">
@@ -11,6 +181,7 @@
 			</div>
 		</div>
 	</div>
+-->
 	
 	<!-- Modal -->
 	<div id="general_modal_container"></div>

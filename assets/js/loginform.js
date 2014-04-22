@@ -19,7 +19,7 @@ $('#submit').click(function() {
 		type: 'post',
 		success: function(result) {			
 			if (result) {				
-				document.location.href = config.siteURL+"pages/dashboarduser";
+				document.location.href = config.siteURL+"pages/dashboard-user";
 			} else {
 				$('#msg').html("Email Address and Password is wrong");				
 			}		
