@@ -103,7 +103,7 @@
     	</div>
         
         <div class="row col-md-6"  style="padding:20px;">
-        
+        <h5 class="col-md-12">Equipment & Machinery</h5>
 		<form name="frmAdvanceSearchUser" method="post">
 		
 		<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" style="margin-bottom:30px;">
@@ -253,48 +253,5 @@
 </div>
 
 <!-- feature -->
-
-
-<div class="row add_top_15">
-    <div class="container" style="background: #fff;">
-        <div class="col-md-12" >
-            <div class="col-md-3">
-                <ul>
-                    <li>    
-                        <a href="<?php echo site_url('pages/loginform'); ?>">Login</a>
-                    </li>
-                    <li>    
-                        <a href="<?php echo site_url('pages/loginform'); ?>">Login Administrator</a>
-                    </li>
-                </ul>      	
-            </div>
-            <div class="col-md-6"></div>
-            <div class="col-md-3"></div>
-        </div>
-    </div>
-
-<div class="col-md-2">
-	<div class="login-box kan">
-		<a href="<?php echo site_url('pages/loginform'); ?>">Login</a>
-		
-	</div>
-	<div class="login-box kan">
-		<a href="<?php echo site_url('pages/loginform'); ?>">Login Administrator</a>		
-	</div>
-	<div class="login-box kan">
-		<a href="<?php echo site_url('pages/registerrenter'); ?>">Register Renter</a>		
-	</div>
-	<div class="login-box kan">
-		<a href="<?php echo site_url('pages/registerrentee'); ?>">Register Rentee</a>		
-	</div>
-</div>
-<div class="col-md-2">
-	<input class="form-control btn btn-primary" type="submit" name="submit" value="Register">
-</div>
-<!-- end -->
-</div>
-
-
-
 
 <script type="text/javascript" src="<?php echo asset_url('/js/pages.js');?>"></script>

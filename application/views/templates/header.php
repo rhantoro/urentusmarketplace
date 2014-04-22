@@ -67,9 +67,9 @@
                     
                     <div class="menu pull-right">
                         <ul class="navlist list-inline">
-                            <li><a href="">Bergabung menjadi member</a></li>
-                            <li><a href="">Login member</a></li>
-                            <li><a href="">Site map</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="">Bergabung menjadi member</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="">Login member</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="">Site map</a></li>
                         </ul>
                     </div>
                     
