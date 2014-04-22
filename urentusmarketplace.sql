@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `brand` (
   KEY `brandname` (`brandname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.brand: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.brand: ~2 rows (approximately)
 DELETE FROM `brand`;
 /*!40000 ALTER TABLE `brand` DISABLE KEYS */;
 INSERT INTO `brand` (`brandcode`, `brandname`, `createddate`, `createdip`, `createdby`) VALUES
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`categorycode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.category: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.category: ~3 rows (approximately)
 DELETE FROM `category`;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 INSERT INTO `category` (`categorycode`, `categoryname`, `createddate`, `createdip`, `createdby`) VALUES
@@ -67,6 +67,9 @@ CREATE TABLE IF NOT EXISTS `city` (
 -- Dumping data for table urentusmarketplace.city: ~0 rows (approximately)
 DELETE FROM `city`;
 /*!40000 ALTER TABLE `city` DISABLE KEYS */;
+INSERT INTO `city` (`citycode`, `provincecode`, `cityname`) VALUES
+	('Aceh 1', 'Aceh', 'Aceh 1'),
+	('Padang', 'Sumatera Barat', 'Padang');
 /*!40000 ALTER TABLE `city` ENABLE KEYS */;
 
 
@@ -78,6 +81,7 @@ CREATE TABLE IF NOT EXISTS `company` (
   `companytype` varchar(50) NOT NULL,
   `companylogo` varchar(50) DEFAULT NULL,
   `companyaddress` varchar(200) DEFAULT NULL,
+  `zipcode` varchar(10) DEFAULT NULL,
   `companycity` varchar(50) DEFAULT NULL,
   `companyprovince` varchar(50) DEFAULT NULL,
   `companyofficephone` varchar(50) DEFAULT NULL,
@@ -95,13 +99,15 @@ CREATE TABLE IF NOT EXISTS `company` (
   `updatedby` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idcompany`),
   UNIQUE KEY `companycode` (`companycode`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table urentusmarketplace.company: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.company: ~2 rows (approximately)
 DELETE FROM `company`;
 /*!40000 ALTER TABLE `company` DISABLE KEYS */;
-INSERT INTO `company` (`idcompany`, `companycode`, `companyname`, `companytype`, `companylogo`, `companyaddress`, `companycity`, `companyprovince`, `companyofficephone`, `companyofficenumber`, `companyofficemap`, `membershiptype`, `companyemailaddress`, `website`, `isactive`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES
-	(1, 'ABCD', 'PT ABCD', 'renter', NULL, 'Jalan', 'City', 'Province', '123', '321', NULL, NULL, NULL, NULL, 1, '2014-04-20 14:28:17', NULL, NULL, '2014-04-20 14:28:18', NULL, NULL);
+INSERT INTO `company` (`idcompany`, `companycode`, `companyname`, `companytype`, `companylogo`, `companyaddress`, `zipcode`, `companycity`, `companyprovince`, `companyofficephone`, `companyofficenumber`, `companyofficemap`, `membershiptype`, `companyemailaddress`, `website`, `isactive`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES
+	(1, 'ABCD', 'PT ABCD', 'renter', NULL, 'Jalan', NULL, 'City', 'Province', '123', '321', NULL, NULL, NULL, NULL, 1, '2014-04-20 14:28:17', NULL, NULL, '2014-04-20 14:28:18', NULL, NULL),
+	(2, '', 'PT. CHAKRA JAWARA', 'renter', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '2014-04-21 13:25:07', '::1', 'Admin', NULL, NULL, NULL),
+	(6, 'PTTU', 'PT TRAKINDO UTAMA', 'renter', NULL, 'CILANDAK', '12345', 'Aceh 1', 'Aceh', NULL, '1000', NULL, NULL, 'INFO@TRAKINDO.CO.ID', 'WWW.TRAKINDO.CO.ID', 0, '2014-04-22 05:42:19', '::1', 'Admin', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `company` ENABLE KEYS */;
 
 
@@ -505,7 +511,7 @@ CREATE TABLE IF NOT EXISTS `province` (
   KEY `regioncode` (`regioncode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.province: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.province: ~4 rows (approximately)
 DELETE FROM `province`;
 /*!40000 ALTER TABLE `province` DISABLE KEYS */;
 INSERT INTO `province` (`provincecode`, `regioncode`, `provincename`) VALUES
@@ -687,13 +693,14 @@ CREATE TABLE IF NOT EXISTS `useraccess` (
   `updatedby` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`iduseraccess`),
   KEY `userid` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table urentusmarketplace.useraccess: ~0 rows (approximately)
 DELETE FROM `useraccess`;
 /*!40000 ALTER TABLE `useraccess` DISABLE KEYS */;
 INSERT INTO `useraccess` (`iduseraccess`, `companytype`, `companycode`, `companyname`, `userid`, `password`, `fullname`, `emailaddress`, `usertype`, `isactive`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES
-	(1, 'renter', 'ABCD', 'PT ABCD', 'rhantoro@gmail.com', '202cb962ac59075b964b07152d234b70', 'RIA HANTORO', 'rhantoro@gmail.com', 'SUPERUSER', 1, '2014-04-20 11:18:24', NULL, NULL, '2014-04-20 14:27:48', NULL, NULL);
+	(1, 'renter', 'ABCD', 'PT ABCD', 'rhantoro@gmail.com', '202cb962ac59075b964b07152d234b70', 'RIA HANTORO', 'rhantoro@gmail.com', 'SUPERUSER', 1, '2014-04-20 11:18:24', NULL, NULL, '2014-04-20 14:27:48', NULL, NULL),
+	(2, 'renter', 'PTTU', 'PT TRAKINDO UTAMA', 'TORO@SEWATAMA.COM', '1234', 'TORO', 'TORO@SEWATAMA.COM', 'SUPERUSER', 0, '2014-04-22 05:42:19', '::1', 'TORO@SEWATAMA.COM', NULL, NULL, NULL);
 /*!40000 ALTER TABLE `useraccess` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
