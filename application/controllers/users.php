@@ -55,9 +55,53 @@ class Users extends CI_Controller {
 		redirect(site_url('/'));
 	}
 	
-	public function accountdetail() {		
+	public function account_detail() {		
 		$this->load->view('templates/header');
 		$this->load->view('user/accountdetail');
 		$this->load->view('templates/footer');
+	}
+	
+	public function list_user_account() {
+		$this->load->view('templates/header');
+		$this->load->view('user/listuseraccount');
+		$this->load->view('templates/footer');
+	}
+	
+	public function get_list_user_account($type = "", $criteria = "") {
+		if (!empty($criteria))
+			$criteria = str_replace('%20', ' ', $criteria);
+		
+				
+		$startIndex = $this->input->post('iDisplayStart');
+		$rowPerPage = $this->input->post('iDisplayLength');
+		$totalColSorted = intval($this->input->post('iSortingCols'));
+		
+		$searchCriteria = array();
+		if (!empty($type) && !empty($criteria)) {
+			$searchCriteria[$type] = $criteria;
+		}
+		
+		$orderByArr = array();
+		for ( $i=0 ; $i < $totalColSorted; $i++ ) {
+			$sortColNumber = intval($this->input->post('iSortCol_' . $i));
+			$isSortableCol = (bool) $this->input->post('bSortable_' . $sortColNumber);
+		
+			if ($isSortableCol == TRUE) {
+				$sortDirection = $this->input->post('sSortDir_'.$i) === 'asc' ? 'asc' : 'desc';
+				$shortColIndex = $sortColNumber > 0 ? $sortColNumber - 1 : $sortColNumber;
+				$orderByArr[] = $this->input->post('mDataProp_' .$sortColNumber) . ' ' . $sortDirection;
+			}
+		}		
+		
+		$result = $this->users_model->getListUserAccount($startIndex, $rowPerPage, implode(',', $orderByArr), $searchCriteria);
+		
+		$output = array(
+				"sEcho" => intval($this->input->post('sEcho')),
+				"iTotalRecords" => $result['count_all'],
+				"iTotalDisplayRecords" => $result['count_all'],
+				"aaData" => $result['data']
+		);
+		
+		$this->output->set_content_type('application/json')->set_output(json_encode($output));
 	}
 }

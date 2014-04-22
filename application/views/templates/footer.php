@@ -138,10 +138,10 @@
     						<div class="widget-inner">
     							<h4 class="widget-header section-title">MY ACCOUNT</h4>
     							<ul class="list-unstyled">
-    								<li><a href="<?php echo site_url('pages/loginform'); ?>"> Login</a></li>
-    								<li><a href="<?php echo site_url('pages/loginform'); ?>"> Login Administrator</a></li>
-    								<li><a href="<?php echo site_url('pages/registerrenter'); ?>"> Register Renter</a></li>
-    								<li><a href="<?php echo site_url('pages/registerrentee'); ?>"> Register Rentee</a></li>
+    								<li><a href="<?php echo site_url('pages/login-form'); ?>"> Login</a></li>
+    								<li><a href="<?php echo site_url('pages/login-form'); ?>"> Login Administrator</a></li>
+    								<li><a href="<?php echo site_url('pages/register-renter'); ?>"> Register Renter</a></li>
+    								<li><a href="<?php echo site_url('pages/register-rentee'); ?>"> Register Rentee</a></li>
     							</ul>
     						</div>
     					</div>

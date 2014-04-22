@@ -33,4 +33,25 @@ class Users_model extends CI_Model {
 			return false;
 		}
 	}
+	
+	public function getListUserAccount($startRowIndex = 0, $rowsPerPage = 20, $orderBy = "userid ASC", $criterias = array()) {
+		
+		$this->db->like($criterias);
+		$allRows = $this->db->count_all_results($this->tableName);
+		
+		$this->db->select(implode(',', $this->fields))
+			->from($this->tableName)
+			->like($criterias)
+			->order_by($orderBy)
+			->where(array('companycode'=>'ABCD'))
+			->limit($rowsPerPage, $startRowIndex);
+		$query = $this->db->get();
+		
+		$returnValue = array(
+			'data' => $query->result(),
+			'count_all' => $allRows
+		);
+		
+		return $returnValue;
+	}
 }

@@ -12,7 +12,7 @@ class Pages extends CI_Controller {
 		$this->load->library('form_validation');
 	}
 
-	public function loginform() {
+	public function login_form() {
 		$this->load->view('templates/header');
 		$this->load->view('templates/quicksearch');
 		$this->load->view('pages/loginform');
@@ -26,7 +26,7 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');		
 	}
 
-	public function dashboarduser() {
+	public function dashboard_user() {
 		$this->load->view('templates/header');
 		$this->load->view('pages/dashboarduser');
 		$this->load->view('templates/footer');
@@ -39,16 +39,16 @@ class Pages extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function registerrenter() {
+	public function register_renter() {
 		$this->load->view('templates/header');
 		//$this->load->view('templates/quicksearch');
 		$this->load->view('company/companyregister');
 		$this->load->view('templates/footer');
 	}
 	
-	public function registerrentee() {
+	public function register_rentee() {
 		$this->load->view('templates/header');		
-		$this->load->view('pages/loginform');
+		$this->load->view('company/companyregister');
 		$this->load->view('templates/footer');
 	}
 	
