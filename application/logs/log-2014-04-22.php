@@ -2907,3 +2907,10 @@ ERROR - 2014-04-22 09:55:37 --> Language file contains no data: language/english
 ERROR - 2014-04-22 09:55:37 --> Language file contains no data: language/english/english_lang.php
 ERROR - 2014-04-22 09:55:37 --> Language file contains no data: language/english/english_lang.php
 ERROR - 2014-04-22 09:55:37 --> Query error: Table 'urentusmarketplace.province' doesn't exist
+ERROR - 2014-04-22 10:00:08 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-04-22 10:00:08 --> 404 Page Not Found --> assets
+ERROR - 2014-04-22 10:00:08 --> 404 Page Not Found --> assets
+ERROR - 2014-04-22 10:00:08 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-04-22 10:00:08 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-04-22 10:00:08 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-04-22 10:00:08 --> Query error: Table 'urentusmarketplace.province' doesn't exist

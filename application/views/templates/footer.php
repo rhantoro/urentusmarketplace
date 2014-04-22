@@ -1,6 +1,6 @@
 		</div>
 	</div>
-    <div class="footer-container" id="footer-container">
+    <div class="footer-container add_top_30" id="footer-container">
     
     	<div class="footer-inner alt">
     		<div class="container">
