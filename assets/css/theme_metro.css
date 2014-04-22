@@ -387,3 +387,12 @@ h4.section-title {
 .widget a:hover {
     color:#CB871B;
 }
+
+.footer-inner.main
+{
+    background-color:#fff;
+}
+.footer-inner.alt
+{
+    
+}

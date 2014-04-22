@@ -2,7 +2,7 @@
 	</div>
     <div class="footer-container add_top_30" id="footer-container">
     
-    	<div class="footer-inner alt">
+    	<div class="footer-inner alt add_bottom_15">
     		<div class="container">
     		
     			<div class="row">
@@ -151,7 +151,7 @@
     		</div>
     	</div>
     	
-    	<div class="footer-powered">
+    	<div class="footer-powered add_top_15 add_bottom_15">
     		<div class="container">
     		
     			<div class="row">
