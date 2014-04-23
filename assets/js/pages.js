@@ -87,5 +87,31 @@ $(document).ready(function() {
 					}
 				);
 		}); 
+		
+		$('#product_equipment').click(function(e) {
+			$('#product_select').html("Product : Equipment & Machinery");	
+			$('#product_input').val("EQPMAC");	
+		});
+
+		$('#product_tools').click(function(e) {
+			$('#product_select').html("Product : Tools & Attachment");
+			$('#product_input').val("TOLATC");
+		});
+		
+		$('#product_parts').click(function(e) {
+			$('#product_select').html("Product : Component & Parts");
+			$('#product_input').val("COMPAR");
+		});
+		
+		$('#find_submit').click(function(e) {
+			$('#frmAdvanceSearchUser').submit(function(){
+				 //alert( "Handler for .submit() called." );
+				
+		    })
+		    
+
+			return false;		
+		});
+		
 })
 

@@ -140,6 +140,17 @@ table.dataTable tr.selected, table.dataTable tr.selected > td.sorting_1 {
 	height: auto;
 }
 
+.roundedbox {
+	border: 2px solid #FFC000; 
+	border-radius:10px;
+	padding: 5px;	
+	height: auto;
+}
+
+.roundedbox.flexi {
+	height: auto;
+}
+
 .widget-title {
   	background: url("../images/dots.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
     margin: 5px 0 16px;
@@ -249,4 +260,101 @@ table.dataTable tr.selected, table.dataTable tr.selected > td.sorting_1 {
 
 #rtl-support .tt-dropdown-menu {
   text-align: right;
+}
+
+/************************/
+.listing {
+    margin-top: -15px;
+    min-height: 100px;
+    padding-bottom: 10px;
+}
+
+.listingbox {
+    border-bottom: 1px dotted #BBBBBB;
+    float: left;
+    padding: 5px 2px;
+    position: relative;
+    width: 930px;
+}
+
+
+.item-time {
+    margin: 20px 8px 0 15px;
+    width: 65px;
+}
+.kir {
+    float: left;
+}
+.ico.tgl {
+    margin-bottom: 5px;
+    margin-left: -14px;
+}
+.ico.tgl, .ico.cond, .ico.loc, .ico.tkbgs {
+    background-position: -150px 0;
+    height: 15px;
+    margin: 0 1px 0 0;
+    width: 15px;
+}
+.ico {
+    background: url("http://as.tokobagus.biz/v6/skins/default/images/sprite-inner.1.0.14.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.foto-wrapper {
+    float: left;
+    height: 95px;
+    margin: 0 10px 0 0;
+    width: 95px;
+}
+.fotobox.moreimg {
+    background-position: -145px -507px;
+}
+.fotobox {
+    display: table-cell;
+    height: 95px;
+    text-align: center;
+    vertical-align: middle;
+    width: 95px;
+}
+
+.ikl-box {
+    float: left;
+    padding: 0 5px;
+    width: 552px;
+}
+
+.ikl-title {
+    font-size: 16px;
+    font-weight: bold;
+    height: 38px;
+    line-height: 20px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+.ikl-box ul.listtag {
+    margin: -10px 0 40px;
+}
+.ikl-box ul {
+    margin: 2px 0;
+    padding-top: 2px;
+}
+ol, ul {
+    list-style: none outside none;
+}
+
+.ikl-box ul li {
+    color: #888888;
+    float: left;
+    font-size: 11px;
+    height: 14px;
+    overflow: hidden;
+    padding: 3px 10px 0 0;
+}
+
+.price {
+    color: #333333;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: right;
+    width: 137px;
 }

@@ -19,7 +19,7 @@ $(document).ready(function() {
 			type: 'post',
 			success: function(data) {			
 				if (data.message == "") {
-					document.location.href = config.siteURL+"pages/dashboarduser";
+					$('#msg').html(data.message);
 				} else {
 					$('#msg').html(data.message);				
 				}		

@@ -25,13 +25,13 @@
                         
     					<div class="desc">
                         
-    						<a style="cursor:pointer">Equipment & Machinery</a>
+    						<a style="cursor:pointer" id="product_equipment">Equipment & Machinery</a>
                             
     					</div>
                         
     				</div>
                     
-    				<a class="more" style="cursor:pointer">View more <i class="m-icon-swapright m-icon-white"></i>
+    				<a class="more" style="cursor:pointer" id="product_equipment">View more <i class="m-icon-swapright m-icon-white"></i>
     				</a>
     				
     			</div>
@@ -56,13 +56,13 @@
                         
     					<div class="desc">
                         
-    						<a href="<?php echo site_url('travel_advances/request'); ?>">Tools & Attachment</a>
+    						<a style="cursor:pointer" id="product_tools">Tools & Attachment</a>
                             
     					</div>
                         
     				</div>
                     
-    				<a class="more" href="<?php echo site_url('travel_advances/request'); ?>">View more <i class="m-icon-swapright m-icon-white"></i>
+    				<a class="more" style="cursor:pointer" id="product_tools">View more <i class="m-icon-swapright m-icon-white"></i>
     				</a>
     				<!--  <a href="<?php echo site_url('travel_advances/request'); ?>">-->
     					<!-- <img src="<?php echo asset_url('/images/request_icon.png'); ?>" /> -->
@@ -89,10 +89,10 @@
     					</div>
                         
     					<div class="desc">
-    						<a href="<?php echo site_url('travel_advances/request'); ?>">Component & Parts</a>
+    						<a style="cursor:pointer" id="product_parts">Component & Parts</a>
     					</div>
     				</div>
-    				<a class="more" href="<?php echo site_url('travel_advances/request'); ?>">View more <i class="m-icon-swapright m-icon-white"></i>
+    				<a class="more" style="cursor:pointer" id="product_parts">View more <i class="m-icon-swapright m-icon-white"></i>
     				</a>
     				<!--  <a href="<?php echo site_url('travel_advances/request'); ?>">-->
     					<!-- <img src="<?php echo asset_url('/images/request_icon.png'); ?>" /> -->
@@ -103,9 +103,9 @@
     	</div>
         
         <div class="row col-md-6"  style="padding:20px;">
-        <h5 class="col-md-12">Equipment & Machinery</h5>
-		<form name="frmAdvanceSearchUser" method="post">
-		
+        <h5 class="col-md-12" id="product_select">Product : </h5>
+		<form name="frmAdvanceSearchUser" id="frmAdvanceSearchUser" method="post" action="search/result/">
+		<input type="hidden" name="product_input" id="product_input" class="form-control" value=""/>
 		<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" style="margin-bottom:30px;">
 			 <select class="form-control" name="preference"> <option value="New">New</option> <option value="Used">Used</option><option value="Rent">Rent</option></select>
 		</div>
@@ -122,8 +122,8 @@
 			<div id="the-location"><input type="text" name="location" id="location" size="40" class="typeahead form-control" placeholder="Please Type Location"></div>
 		</div>
         
-		<div class="col-md-3">
-		    <input class="form-control btn btn-primary" type="submit" name="submit" value="Find">
+		<div class="col-md-3">						
+			<input class="form-control btn btn-primary" type="submit" name="submit" value="Find">
 		</div>
         
 		<div class="col-md-3">
