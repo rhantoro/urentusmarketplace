@@ -214,5 +214,30 @@
 	</div>
 	</div>
   </div>
+  
+    <!-- add js in footer -->
+  
+    <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap.min.js');?>"></script>
+    <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-modalmanager.js');?>"></script>
+    <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-modal.js');?>"></script>
+    <script type="text/javascript" src="<?php echo asset_url('/js/jquery-ui.min.js'); ?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-datepicker.js');?>"></script>
+    
+    <script type="text/javascript" src="<?php echo asset_url('/js/twitter-bootstrap-hover-dropdown.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.cookie.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/Mod.js');?>"></script>
+
+	<script type="text/javascript" src="<?php echo asset_url('/js/typeahead.js');?>"></script>
+	<!-- <script type="text/javascript" src="<?php echo asset_url('/js/mobile-menu.js');?>"></script> -->
+	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-tabdrop.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.dataTables.min.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/jquery-dateFormat.min.js');?>"></script>
+  	<script type="text/javascript" src="<?php echo asset_url('/js/grid.js');?>"></script>
+    <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-multiselect.js');?>"></script>
+  <script type="text/javascript">
+    	$(function() {
+			Grid.init();
+		});
+  </script>
 </body>
 </html>

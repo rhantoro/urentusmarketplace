@@ -31,7 +31,7 @@ class Search extends CI_Controller {
 		);
 		
 		//print_r(json_encode($output));
-		//$output['coba'] = 1;
+		
 		$this->load->view('templates/header');
 		$this->load->view('search/result', $output);
 		$this->load->view('templates/footer');

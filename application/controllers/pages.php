@@ -14,14 +14,16 @@ class Pages extends CI_Controller {
 
 	public function login_form() {
 		$this->load->view('templates/header');
-		$this->load->view('templates/quicksearch');
+		//$this->load->view('templates/advancesearch');
 		$this->load->view('pages/loginform');
 		$this->load->view('templates/footer');
 	}
 	
 	public function index() {
 		$this->load->view('templates/header');
-		//$this->load->view('templates/quicksearch');
+		if ($this->session->userdata('loggedin') == "1") $this->load->view('templates/advancesearchmember');
+		else $this->load->view('templates/advancesearch');
+		
 		$this->load->view('pages/index');
 		$this->load->view('templates/footer');		
 	}

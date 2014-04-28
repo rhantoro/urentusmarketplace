@@ -590,5 +590,21 @@ if ( ! function_exists('_parse_attributes'))
 }
 
 
+if ( ! function_exists('encode_url'))
+{
+	function encode_url($uri = '')
+	{
+		return strtr(base64_encode($uri), '+/=', '_,-');
+	}
+}
+
+if ( ! function_exists('decode_url'))
+{
+	function decode_url($uri = '')
+	{
+		return base64_decode(strtr($uri, '_,-', '+/='));
+	}
+}
+
 /* End of file url_helper.php */
 /* Location: ./system/helpers/url_helper.php */

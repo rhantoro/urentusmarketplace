@@ -20,7 +20,9 @@ class Search_model extends CI_Model {
 			
 			//$allRows = $this->db->count_all_results('productitem');
 			
-			$this->db->select('equipmentname, companycode, searchpreference, categorycode, subcategorycode, brandcode, modelcode, capacity, yearmade, hourmeter')
+			$this->db->select('idequipment as idx, equipmentname, companycode, searchpreference, categorycode, subcategorycode, brandcode, modelcode, capacity, yearmade, hourmeter, 
+					mainphoto_original, mainphoto_middle, mainphoto_thumb, description
+					')
 			->from('productitem')
 			->order_by($orderBy)
 			->like(array('filteroptioncode'=>$postData['product_input'], 'categorycode'=>$postData['category'], 'searchpreference'=>$postData['preference'], 'brandcode'=>$postData['brand']));

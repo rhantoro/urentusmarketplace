@@ -505,3 +505,50 @@ padding: 4px 6px;
 .navlist a:hover {
     color:#FFC000
 }
+.dropdown-menu {
+    right: 5px;
+    left: -37px;
+}
+#sidebar li a {
+    color: #69696B;
+    display: block;
+    font-size: 12px;
+    outline: medium none;
+    padding: 8px 0 8px 25px;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+#sidebar ul li ul.sub {
+    padding-left: 15px;
+}
+#sidebar ul li ul.sub li {
+    /*background: none repeat scroll 0 0 #28282E;*/
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#sidebar ul li ul.sub li a {
+    color: #69696B;
+    font-size: 12px;
+    /*padding-bottom: 13px;*/
+    /*padding-top: 13px;*/
+    transition: all 0.3s ease 0s;
+}
+#sidebar ul  li ul.sub li a:hover, #sidebar ul  li ul.sub li.active a {
+    /*background: none repeat scroll 0 0 #202025;*/
+    color: #CB871B;
+    display: block;
+    transition: all 0.3s ease 0s;
+}
+.imageBox_theImage {
+   /* border: 1px solid #CCCCCC;
+    padding: 2px;
+    position: relative;
+    margin: 0 auto 2px;*/
+}
+
+.imageBox_theImage img {
+    background-color: #FFFFFF;
+    border: 1px solid #999;
+    padding: 4px;
+}

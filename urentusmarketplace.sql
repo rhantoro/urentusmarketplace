@@ -15,6 +15,26 @@ CREATE DATABASE IF NOT EXISTS `urentusmarketplace` /*!40100 DEFAULT CHARACTER SE
 USE `urentusmarketplace`;
 
 
+-- Dumping structure for table urentusmarketplace.attachmenttool
+CREATE TABLE IF NOT EXISTS `attachmenttool` (
+  `attachmenttoolcode` varchar(50) NOT NULL,
+  `attachmenttoolname` varchar(50) NOT NULL,
+  `createddate` datetime DEFAULT NULL,
+  `createdip` varchar(50) DEFAULT NULL,
+  `createdby` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`attachmenttoolcode`),
+  KEY `brandname` (`attachmenttoolname`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+
+-- Dumping data for table urentusmarketplace.attachmenttool: ~2 rows (approximately)
+DELETE FROM `attachmenttool`;
+/*!40000 ALTER TABLE `attachmenttool` DISABLE KEYS */;
+INSERT INTO `attachmenttool` (`attachmenttoolcode`, `attachmenttoolname`, `createddate`, `createdip`, `createdby`) VALUES
+	('Blades', 'Blades', '2014-04-20 18:53:53', NULL, NULL),
+	('Bucket', 'Bucket', '2014-04-20 18:53:56', NULL, NULL);
+/*!40000 ALTER TABLE `attachmenttool` ENABLE KEYS */;
+
+
 -- Dumping structure for table urentusmarketplace.brand
 CREATE TABLE IF NOT EXISTS `brand` (
   `brandcode` varchar(50) NOT NULL,
@@ -45,13 +65,14 @@ CREATE TABLE IF NOT EXISTS `category` (
   PRIMARY KEY (`categorycode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.category: ~3 rows (approximately)
+-- Dumping data for table urentusmarketplace.category: ~4 rows (approximately)
 DELETE FROM `category`;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
 INSERT INTO `category` (`categorycode`, `categoryname`, `createddate`, `createdip`, `createdby`) VALUES
 	('Backhoe', 'Backhoe', '2014-04-20 18:52:09', NULL, NULL),
+	('Earthmoving', 'Earthmoving', '2014-04-20 21:23:59', NULL, NULL),
 	('Excavator', 'Excavator', '2014-04-20 18:51:32', NULL, NULL),
-	('Grader', 'Grader', '2014-04-20 21:23:59', NULL, NULL);
+	('Power Generation', 'Power Generation', '2014-04-24 16:54:22', NULL, NULL);
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 
 
@@ -64,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `city` (
   KEY `provincecode` (`provincecode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.city: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.city: ~2 rows (approximately)
 DELETE FROM `city`;
 /*!40000 ALTER TABLE `city` DISABLE KEYS */;
 INSERT INTO `city` (`citycode`, `provincecode`, `cityname`) VALUES
@@ -101,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `company` (
   UNIQUE KEY `companycode` (`companycode`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
--- Dumping data for table urentusmarketplace.company: ~2 rows (approximately)
+-- Dumping data for table urentusmarketplace.company: ~3 rows (approximately)
 DELETE FROM `company`;
 /*!40000 ALTER TABLE `company` DISABLE KEYS */;
 INSERT INTO `company` (`idcompany`, `companycode`, `companyname`, `companytype`, `companylogo`, `companyaddress`, `zipcode`, `companycity`, `companyprovince`, `companyofficephone`, `companyofficenumber`, `companyofficemap`, `membershiptype`, `companyemailaddress`, `website`, `isactive`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES
@@ -251,16 +272,21 @@ INSERT INTO `filteroption` (`filteroptioncode`, `filteroptionname`) VALUES
 CREATE TABLE IF NOT EXISTS `industry` (
   `industrycode` varchar(50) NOT NULL,
   `industryname` varchar(50) DEFAULT NULL,
-  `createddate` varchar(50) DEFAULT NULL,
+  `createddate` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `createdip` varchar(50) DEFAULT NULL,
   `createdby` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`industrycode`),
   KEY `industryname` (`industryname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.industry: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.industry: ~4 rows (approximately)
 DELETE FROM `industry`;
 /*!40000 ALTER TABLE `industry` DISABLE KEYS */;
+INSERT INTO `industry` (`industrycode`, `industryname`, `createddate`, `createdip`, `createdby`) VALUES
+	('Agriculture', 'Agriculture', '2014-04-25 11:13:43', NULL, NULL),
+	('Forestry', 'Forestry', '2014-04-25 11:13:59', NULL, NULL),
+	('Mining', 'Mining', '2014-04-25 11:13:26', NULL, NULL),
+	('Oil & Gas', 'Oil & Gas', '2014-04-25 11:13:27', NULL, NULL);
 /*!40000 ALTER TABLE `industry` ENABLE KEYS */;
 
 
@@ -424,7 +450,7 @@ DELETE FROM `productindustry`;
 CREATE TABLE IF NOT EXISTS `productitem` (
   `idequipment` int(10) NOT NULL AUTO_INCREMENT,
   `equipmentname` varchar(50) NOT NULL,
-  `idrenter` int(10) NOT NULL,
+  `companycode` varchar(50) NOT NULL,
   `filteroptioncode` varchar(50) NOT NULL,
   `searchpreference` varchar(50) NOT NULL,
   `industry` varchar(50) DEFAULT NULL,
@@ -442,6 +468,9 @@ CREATE TABLE IF NOT EXISTS `productitem` (
   `region` varchar(50) DEFAULT NULL,
   `province` varchar(50) DEFAULT NULL,
   `city` varchar(50) DEFAULT NULL,
+  `mainphoto_original` varchar(50) DEFAULT NULL,
+  `mainphoto_middle` varchar(50) DEFAULT NULL,
+  `mainphoto_thumb` varchar(50) DEFAULT NULL,
   `createddate` datetime DEFAULT NULL,
   `createdip` varchar(50) DEFAULT NULL,
   `createdby` varchar(50) DEFAULT NULL,
@@ -452,7 +481,7 @@ CREATE TABLE IF NOT EXISTS `productitem` (
   KEY `categorycode` (`categorycode`),
   KEY `subcategorycode` (`subcategorycode`),
   KEY `filteroptioncode` (`filteroptioncode`),
-  KEY `idrenter` (`idrenter`),
+  KEY `idrenter` (`companycode`),
   KEY `searchpreference` (`searchpreference`),
   KEY `attachmenttoolcode` (`attachmenttoolcode`),
   KEY `brandcode` (`brandcode`),
@@ -460,11 +489,17 @@ CREATE TABLE IF NOT EXISTS `productitem` (
   KEY `capacity` (`capacity`),
   KEY `yearmade` (`yearmade`),
   KEY `hourmeter` (`hourmeter`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.productitem: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.productitem: ~5 rows (approximately)
 DELETE FROM `productitem`;
 /*!40000 ALTER TABLE `productitem` DISABLE KEYS */;
+INSERT INTO `productitem` (`idequipment`, `equipmentname`, `companycode`, `filteroptioncode`, `searchpreference`, `industry`, `categorycode`, `subcategorycode`, `attachmenttoolcode`, `brandcode`, `modelcode`, `capacity`, `yearmade`, `hourmeter`, `specification`, `description`, `price`, `region`, `province`, `city`, `mainphoto_original`, `mainphoto_middle`, `mainphoto_thumb`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES
+	(1, 'Equipment 1', 'PTTU', 'EQPMAC', 'New', NULL, 'Backhoe', '', NULL, 'Caterpillar', '', NULL, NULL, NULL, 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lo', 'description lorem ipsum', 0, NULL, NULL, NULL, 'trakindo-big.gif', 'trakindo.gif', 'trakindo.gif', '2014-04-22 18:04:13', NULL, NULL, '2014-04-26 23:47:56', NULL, NULL),
+	(2, 'Equipment 2', 'PTTU', 'TOLSPC', 'New', NULL, 'Backhoe', '', NULL, 'Caterpillar', '', NULL, NULL, NULL, 'lorem ipsum', '', 0, NULL, NULL, NULL, 'video1.jpg', 'video1.jpg', 'video1.jpg', '2014-04-22 18:04:13', NULL, NULL, '2014-04-27 00:05:56', NULL, NULL),
+	(3, 'Equipment 2', 'PTTU', 'EQPMAC', 'New', NULL, 'Backhoe', '', NULL, 'Caterpillar', '', NULL, NULL, NULL, 'lorem ipsum', '', 0, NULL, NULL, NULL, 'video1.jpg', 'video1-middle.jpg', 'video1.jpg', '2014-04-22 18:04:13', NULL, NULL, '2014-04-27 11:26:56', NULL, NULL),
+	(4, 'Equipment 3', 'PTTU', 'EQPMAC', 'New', NULL, 'Backhoe', '', NULL, 'Caterpillar', '', NULL, NULL, NULL, 'lorem ipsum', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, '2014-04-22 18:04:13', NULL, NULL, '2014-04-26 17:42:53', NULL, NULL),
+	(5, 'Equipment 4', 'PTTU', 'EQPMAC', 'New', NULL, 'Backhoe', '', NULL, 'Caterpillar', '', NULL, NULL, NULL, 'lorem ipsum', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, '2014-04-22 18:04:13', NULL, NULL, '2014-04-26 17:42:55', NULL, NULL);
 /*!40000 ALTER TABLE `productitem` ENABLE KEYS */;
 
 
@@ -478,11 +513,15 @@ CREATE TABLE IF NOT EXISTS `productlocation` (
   `stock` int(11) DEFAULT NULL,
   PRIMARY KEY (`idproductlocation`),
   KEY `idequipment` (`idequipment`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.productlocation: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.productlocation: ~3 rows (approximately)
 DELETE FROM `productlocation`;
 /*!40000 ALTER TABLE `productlocation` DISABLE KEYS */;
+INSERT INTO `productlocation` (`idproductlocation`, `idequipment`, `region`, `province`, `city`, `stock`) VALUES
+	(1, 1, 'Jawa', 'Jawa Timur', 'Surabaya', 3),
+	(2, 1, 'Jawa', 'Jawa Timur', 'Malang', 2),
+	(3, 1, 'Sumater', 'Sumater Barat', 'Padang', 3);
 /*!40000 ALTER TABLE `productlocation` ENABLE KEYS */;
 
 
@@ -491,14 +530,17 @@ CREATE TABLE IF NOT EXISTS `productphoto` (
   `idphoto` int(10) NOT NULL AUTO_INCREMENT,
   `idequipment` int(10) NOT NULL,
   `originalfilename` varchar(50) DEFAULT NULL,
+  `middlefilename` varchar(50) DEFAULT NULL,
   `thumbnailfilename` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idphoto`),
   KEY `idequipment` (`idequipment`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.productphoto: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.productphoto: ~1 rows (approximately)
 DELETE FROM `productphoto`;
 /*!40000 ALTER TABLE `productphoto` DISABLE KEYS */;
+INSERT INTO `productphoto` (`idphoto`, `idequipment`, `originalfilename`, `middlefilename`, `thumbnailfilename`) VALUES
+	(1, 1, 'trakindo-big.gif', NULL, 'trakindo-big.gif');
 /*!40000 ALTER TABLE `productphoto` ENABLE KEYS */;
 
 
@@ -667,9 +709,12 @@ CREATE TABLE IF NOT EXISTS `subcategory` (
   KEY `categorycode` (`categorycode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.subcategory: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.subcategory: ~2 rows (approximately)
 DELETE FROM `subcategory`;
 /*!40000 ALTER TABLE `subcategory` DISABLE KEYS */;
+INSERT INTO `subcategory` (`subcategorycode`, `categorycode`, `subcategoryname`, `createddate`, `createdip`, `createdby`) VALUES
+	('Sub Backhoe', 'Backhoe', 'Sub Backhoe', '2014-04-23 13:39:01', NULL, NULL),
+	('Sub Backhoe2', 'Backhoe', 'Sub Backhoe', '2014-04-23 13:39:01', NULL, NULL);
 /*!40000 ALTER TABLE `subcategory` ENABLE KEYS */;
 
 
@@ -695,7 +740,7 @@ CREATE TABLE IF NOT EXISTS `useraccess` (
   KEY `userid` (`userid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.useraccess: ~0 rows (approximately)
+-- Dumping data for table urentusmarketplace.useraccess: ~2 rows (approximately)
 DELETE FROM `useraccess`;
 /*!40000 ALTER TABLE `useraccess` DISABLE KEYS */;
 INSERT INTO `useraccess` (`iduseraccess`, `companytype`, `companycode`, `companyname`, `userid`, `password`, `fullname`, `emailaddress`, `usertype`, `isactive`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES

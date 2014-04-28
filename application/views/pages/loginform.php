@@ -1,8 +1,6 @@
 <div class="col-md-12">
 
-<div style="height:300px; background: none repeat scroll 0 0 #F6F6F6; border: 1px solid #EEEEEE; 
-margin-bottom: 40px; margin-top: 20px; padding: 20px;">
-	
+<div class="col-md-11" style="background-color: #fff">	
 	<div class="col-md-6" style="margin-top:40px;">
 		<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12">
 			<div class="dashboard-stat blue">
@@ -63,6 +61,11 @@ margin-bottom: 40px; margin-top: 20px; padding: 20px;">
 			</div>
 	</div>
 	</form>
+	<div class="clearfix"></div>
+	<br/><br/><br/><br/>
 </div>
+	
+	
 </div>
+
 <script type="text/javascript" src="<?php echo asset_url('/js/loginform.js');?>"></script>

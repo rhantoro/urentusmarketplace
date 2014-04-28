@@ -19,14 +19,17 @@
 	<link href="<?php echo asset_url('css/style-responsive.css'); ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo asset_url('css/datepicker.css'); ?>" rel="stylesheet" type="text/css" media="screen" />	
     <link href="<?php echo asset_url('/css/jquery.dataTables.css'); ?>" rel="stylesheet" type="text/css">
-    
-	
+    <link href="<?php echo asset_url('/css/bootstrap-multiselect.css'); ?>" rel="stylesheet" type="text/css">
+	<link href="<?php echo asset_url('/css/component.css'); ?>" rel="stylesheet" type="text/css">
 	
     <!--[if lt IE 9]>
       <script type="text/javascript" src="<?php echo asset_url('js/html5shiv.js'); ?>"></script>
       <script type="text/javascript" src="<?php echo asset_url('js/respond.min.js'); ?>"></script>
     <![endif]-->
    
+   	<script type="text/javascript" src="<?php echo asset_url('/js/modernizr.custom.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/jquery-1.10.2.min.js');?>"></script>
+	<!-- 
     <script type="text/javascript" src="<?php echo asset_url('/js/jquery-1.10.2.min.js');?>"></script>
     <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap.min.js');?>"></script>
     <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-modalmanager.js');?>"></script>
@@ -38,10 +41,16 @@
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.cookie.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/Mod.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/typeahead.js');?>"></script>
+	-->
+	
 	<!-- <script type="text/javascript" src="<?php echo asset_url('/js/mobile-menu.js');?>"></script> -->
+	<!-- 
 	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-tabdrop.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.dataTables.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery-dateFormat.min.js');?>"></script>
+	
+	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-multiselect.js');?>"></script>
+	-->
 	<script type="text/javascript">
 		$(document).ready(function() {
 			 //$('#main-nav').mobileMenu();
@@ -62,7 +71,7 @@
 			<div class="header">
 				<div class="header-inner">
                     <div class="brand">
-                        <img src="assets/images/logo.png">
+                        <img src="<?php echo asset_url('/images/logo.png') ?>">
                     </div>
                     
                     <div class="menu pull-right">
@@ -70,7 +79,23 @@
                             <li><i class="icon-double-angle-right"></i><a href="">Bergabung menjadi member</a></li>
                             <li><i class="icon-double-angle-right"></i><a href="">Login member</a></li>
                             <li><i class="icon-double-angle-right"></i><a href="">Site map</a></li>
-                        </ul>
+                            <?php if ($this->session->userdata('loggedin')): ?>        	
+        							<li class="dropdown user">
+        								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+        								<!-- <img alt="" src="<?php echo asset_url('images/unknown_person.png'); ?>"> -->
+        								<i class="icon-user"></i>
+        								<span class="username"><?php echo $this->session->userdata('fullname'); ?></span>
+        								<i class="icon-angle-down"></i>
+        								</a>
+        								<ul class="dropdown-menu">
+        									<li>
+        										<a href="<?php echo site_url('/users/logout'); ?>"><i class="icon-key"></i> Log Out</a>
+        									</li>
+        								</ul>
+        							</li>
+        						
+        					<?php endif; ?>
+                        
                     </div>
                     
                     <br />
@@ -89,30 +114,6 @@
 						<span class="icon-bar">	</span>
 					</button>
 					
-					<a class="navbar-brand visible-sm visible-md visible-lg">UrentUs</a>
-					<?php if ($this->session->userdata('loggedin')): ?>
-						<a class="navbar-brand visible-xs">C A S T</a>
-						<ul class="nav navbar-nav pull-right">						
-							<?php 
-							//$menus = $this->session->userdata('menus');
-							//echo generate_menus($menus); 
-							?>
-	
-							<li class="dropdown user">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-								<!-- <img alt="" src="<?php echo asset_url('images/unknown_person.png'); ?>"> -->
-								<i class="icon-user"></i>
-								<span class="username"><?php echo $this->session->userdata('fullname'); ?></span>
-								<i class="icon-angle-down"></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li>
-										<a href="<?php echo site_url('/users/logout'); ?>"><i class="icon-key"></i> Log Out</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					<?php endif; ?>
 				</div>
 			</div>
 			<!--/.nav-collapse -->
