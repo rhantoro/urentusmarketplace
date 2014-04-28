@@ -61,8 +61,10 @@ foreach($aaDataLocation as $key=>$value){
 <input type="text" name="number_item" id="number_item" class="form-control" placeholder="enter number of item">
 </div>
 <div class="col-md-5">Location</div><div class="col-md-6"><input type="text" name="location" class="form-control" placeholder="enter location"></div>
-<div class="col-md-5">Start Date</div><div class="col-md-6"><input type="text" name="start_date" id="start_date" class="form-control"></div>
-<div class="col-md-5">End Date</div><div class="col-md-6"><input type="text" name="end_date" id="end_date" class="form-control"></div>
+<div class="col-md-5">Start Date</div><div class="col-md-6 input-group merged date"><input type="text" name="start_date" id="start_date" class="form-control"><span class="input-group-addon">
+					<i class="icon-th"></i>
+					</span></div>
+<div class="col-md-5">End Date</div><div class="col-md-6 input-group merged date"><input type="text" name="end_date" id="end_date" class="form-control"></div>
 <div class="col-md-11">&nbsp;</div>
 <div class="col-md-6">						
 	<input class="form-control btn btn-primary" type="submit" name="submit" value="Add to Cart">

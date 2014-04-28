@@ -14,6 +14,12 @@ $(document).ready(function() {
 		 format: 'MM d, yyyy'
 	});
 	
-		
+	$('#submit-inquiry').click(function(e) {
+		document.location.href = config.siteURL + "product/notification/";	
+	});
+	
+	$('#continue-shop').click(function(e) {
+		document.location.href = config.siteURL;	
+	});
 })
 

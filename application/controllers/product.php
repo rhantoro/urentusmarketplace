@@ -36,10 +36,6 @@ class Product extends CI_Controller {
 		
 		
 		if ($this->session->userdata('product') != null) {
-			//$addToCarts = $this->session->userdata('product');
-			//echo count($addToCarts);
-			print_r($this->session->userdata('product'));
-			//$xx = $this->session->userdata('product');
 			
 			$x=0;
 			foreach($this->session->userdata('product') as $cartItems){
@@ -53,23 +49,16 @@ class Product extends CI_Controller {
 					'special_note'=>$cartItems['special_note']
 				); 
 				
-				//$addToCart[1] = $this->input->post();
-				//array_push($addToCarts, $addToCart);
 				$x++;
 			}
-			echo $x;
+
+			//echo $x;
 			$addToCarts[$x] = $this->input->post();
 			$this->session->set_userdata('product',$addToCarts);
 		} else {
 			$addToCart[0] = $this->input->post();
 			$this->session->set_userdata('product',$addToCart);
-		}
-		
-		
-		//$addToCarts = $this->session->userdata('product');
-		//array_push($addToCarts, $addToCart);
-		//$addToCart = $this->input->post();
-		//$this->cart->insert($addToCart);
+		}		
 		
 		//$this->session->sess_destroy();
 		
@@ -78,4 +67,11 @@ class Product extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 	
+	public function notification() {
+		$result = $this->product_model->submitInquiry();
+		
+		$this->load->view('templates/header');
+		$this->load->view('product/shoppingcart');
+		$this->load->view('templates/footer');
+	}
 }

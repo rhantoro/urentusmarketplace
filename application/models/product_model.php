@@ -78,4 +78,8 @@ class Product_model extends CI_Model {
 	
 		return $returnValue;
 	}
+
+	public function submitInquiry() {
+		
+	}
 }

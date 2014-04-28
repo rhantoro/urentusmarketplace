@@ -169,19 +169,6 @@
     	
     </div>
     
-	<!--
-<div class="footer" id="footer">
-		<div class="container">
-			<a href="#top" id="back-top" style=""><i class="icon-arrow-up"></i>Top</a>
-			<div class="footer-inner">
-				2014 &copy; PT UrentUs Media Digital
-			</div>
-			<div class="footer-tools" style="display:none;">
-				<span class="go-top"><i class="icon-angle-up"></i></span>
-			</div>
-		</div>
-	</div>
--->
 	
 	<!-- Modal -->
 	<div id="general_modal_container"></div>
