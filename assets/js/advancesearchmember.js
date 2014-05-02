@@ -28,7 +28,8 @@ $(document).ready(function() {
 	};
 		
 		var configurationSet = {
-			includeSelectAllOption: true            
+			includeSelectAllOption: true,
+			buttonWidth: '300px'
 		};
 	
 		 function rebuildMultiselect(options) {
@@ -130,6 +131,27 @@ $(document).ready(function() {
 				);
 		}); 
 		
+		$.getJSON(config.siteURL + "model/getalldata/", function(data){
+			var items = [];
+		    $.each(data.data, function (key,val) {
+		        items.push(val['modelcode']);		        
+		    });
+		    var theModel = items;
+		    
+		    $('#the-model .typeahead').typeahead(
+					{
+						hint: true,
+						highlight: true,
+						minLength: 1
+					},
+					{
+						name: 'states',
+						displayKey: 'value',
+						source: substringMatcher(theModel)
+					}
+				);
+		}); 
+		
 		$.getJSON(config.siteURL + "location/getallprovince/", function(data){
 			var items = [];
 		    $.each(data.data, function (key,val) {
@@ -154,33 +176,44 @@ $(document).ready(function() {
 		$('#product_equipment').click(function(e) {
 			$('#product_select').html("Product : Equipment & Machinery");	
 			$('#product_input').val("EQPMAC");
-			$('#div_part_number').hide();
-			$('#div_preference').show();
+			$('#the-attachment').hide();
+			$('#the-industry').show();
+			$('#the-hourmeter').show();
+			$('#the-capacity').show();
+			$('#the-yearmade').show();
 		});
 
 		$('#product_tools').click(function(e) {
 			$('#product_select').html("Product : Tools & Attachment");
 			$('#product_input').val("TOLATC");
-			$('#div_part_number').hide();
-			$('#div_preference').show();
+			$('#the-attachment').show();
+			$('#the-industry').hide();
+			$('#the-hourmeter').hide();
+			$('#the-yearmade').show();
+			$('#the-capacity').show();
 		});
 		
 		$('#product_parts').click(function(e) {
 			$('#product_select').html("Product : Component & Parts");
 			$('#product_input').val("COMPAR");
-			$('#div_part_number').show();
-			$('#div_preference').hide();
+			//$('#div_part_number').show();
+			$('#the-industry').show();
+			$('#the-attachment').hide();
+			$('#the-hourmeter').hide();
+			$('#the-capacity').hide();
+			$('#the-yearmade').hide();
+			
 		});
 		
-		$('#find_submit').click(function(e) {
-			$('#frmAdvanceSearchUser').submit(function(){
-				 //alert( "Handler for .submit() called." );
-				
-		    })
-		    
-
-			return false;		
+		$('#frmAdvanceSearchUser').submit(function( event ) {			
+			if ( $('#product_input').val() == "") {
+				$('#msg').html("Please select product first").show().fadeOut( 3000 );
+				return false;
+			} else {			 	
+				return true;				
+			}
 		});
+		
 		
 })
 

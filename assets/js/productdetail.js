@@ -1,18 +1,11 @@
 $(document).ready(function() {
-	
-	$('#start_date').datepicker({
-		 todayBtn: true,
-		 autoclose: true,
-		 todayHighlight: true,
-		 format: 'MM d, yyyy'
-	});
-	
-	$('#end_date').datepicker({
-		 todayBtn: true,
-		 autoclose: true,
-		 todayHighlight: true,
-		 format: 'MM d, yyyy'
-	});
+	$('#start_date_picker').datetimepicker({
+        pickTime: false
+	 });
+	 $('#end_date_picker').datetimepicker({
+	        pickTime: false
+	 });
+	 
 	
 	$('#submit-inquiry').click(function(e) {
 		document.location.href = config.siteURL + "product/notification/";	

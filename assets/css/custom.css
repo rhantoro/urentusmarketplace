@@ -358,3 +358,39 @@ ol, ul {
     text-align: right;
     width: 137px;
 }
+
+/***Paging*****************/
+ul.paging {
+    color: #BBBBBB;
+    font-weight: 700;
+    height: 50px;
+    margin-top: 20px;
+}
+ol, ul {
+    list-style: none outside none;
+}
+ul.paging a {
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    padding: 3px 8px 4px;
+}
+ul.paging a {
+    color: #1C60A7;
+    outline: 0 none;
+    text-decoration: none;
+}
+ul.paging li {
+    float: left;
+    margin: 0 3px 0 0;
+}
+ul.paging  a:hover {
+	background: none repeat scroll 0 0 #4C6DB4;
+	color: #FFFFFF;	
+}
+
+ul.paging a.on, ul.paging a.on:hover {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-color: #DDDDDD;
+    color: #666666;
+    cursor: default;
+}

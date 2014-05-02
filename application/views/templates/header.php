@@ -77,7 +77,7 @@
                     <div class="menu pull-right">
                         <ul class="navlist list-inline">
                             <li><i class="icon-double-angle-right"></i><a href="">Bergabung menjadi member</a></li>
-                            <li><i class="icon-double-angle-right"></i><a href="">Login member</a></li>
+                            <li><i class="icon-double-angle-right"></i><a href="<?php echo site_url('pages/login-form'); ?>">Login member</a></li>
                             <li><i class="icon-double-angle-right"></i><a href="">Site map</a></li>
                             <?php if ($this->session->userdata('loggedin')): ?>        	
         							<li class="dropdown user">

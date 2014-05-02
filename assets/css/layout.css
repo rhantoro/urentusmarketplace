@@ -475,6 +475,25 @@ padding: 4px 6px;
 .line-heigh-20 {
     line-height: 20px;
 }
+.add_margin_right_5 {
+    margin-right: 5px;
+}
+.add_margin_right_10 {
+    width:2em;
+    margin-right: 10px;
+}
+.add_bottom_5 {
+    margin-bottom: 5px;
+}
+.add_top_5 {
+    margin-top: 5px;
+}
+.add_bottom_10 {
+    margin-bottom: 10px;
+}
+.add_top_10 {
+    margin-top: 10px;
+}
 .add_top_15 {
     margin-top: 15px;
 }

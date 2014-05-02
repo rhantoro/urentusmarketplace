@@ -70,14 +70,16 @@
     	<div class="clearfix"> </div>
     	<h5 class="col-md-12" id="product_select">Product : </h5>
     	<form name="frmAdvanceSearchUser" id="frmAdvanceSearchUser" method="post" action="search/result/">
+    	<input type="hidden" name="product_input" id="product_input" class="form-control" value=""/>
+    	<input type="hidden" name="modes" id="modes" class="form-control" value="member"/>
     	<div class="col-md-12">
     		<div class="col-md-3" style="vertical-align: top;" style="padding: 2px;">
     			<select class="form-control" name="preference"> <option value="New">New</option> <option value="Used">Used</option><option value="Rent">Rent</option></select>
     			<br/>
-    			Industry :
-    			<select class="multiselect form-control" id="industry" name="industry" multiple="multiple">
-
-				</select>
+    			<div id="the-industry" style="padding: 2px;">
+    			Industry :<br/>
+    			<select class="multiselect form-control" id="industry" name="industry" multiple="multiple"></select>
+				</div>
     		</div>
     		<div class="col-md-3" style="vertical-align: top;">
     			<div id="the-category" style="padding: 2px;"><input type="text" name="category" id="category" size="40" class="typeahead form-control" placeholder="Please Type Category"></div>
@@ -96,6 +98,7 @@
     		</div>
     	</div>
     	<div class="clearfix"> </div>
+    	 <div class="col-md-10" id="msg"></div>
     	<div class="col-md-12" style="margin-top:15px;">
     		<div class="col-md-2"></div>
     		<div class="col-md-2"></div>

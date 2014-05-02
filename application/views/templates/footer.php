@@ -208,7 +208,8 @@
     <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-modalmanager.js');?>"></script>
     <script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-modal.js');?>"></script>
     <script type="text/javascript" src="<?php echo asset_url('/js/jquery-ui.min.js'); ?>"></script>
-	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-datepicker.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/moment.js');?>"></script>
+	<script type="text/javascript" src="<?php echo asset_url('/js/bootstrap-datetimepicker.js');?>"></script>
     
     <script type="text/javascript" src="<?php echo asset_url('/js/twitter-bootstrap-hover-dropdown.min.js');?>"></script>
 	<script type="text/javascript" src="<?php echo asset_url('/js/jquery.cookie.min.js');?>"></script>

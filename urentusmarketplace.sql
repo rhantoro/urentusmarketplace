@@ -94,6 +94,25 @@ INSERT INTO `city` (`citycode`, `provincecode`, `cityname`) VALUES
 /*!40000 ALTER TABLE `city` ENABLE KEYS */;
 
 
+-- Dumping structure for table urentusmarketplace.ci_sessions
+CREATE TABLE IF NOT EXISTS `ci_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(45) NOT NULL DEFAULT '0',
+  `user_agent` varchar(120) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` text NOT NULL,
+  PRIMARY KEY (`session_id`),
+  KEY `last_activity_idx` (`last_activity`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table urentusmarketplace.ci_sessions: ~1 rows (approximately)
+DELETE FROM `ci_sessions`;
+/*!40000 ALTER TABLE `ci_sessions` DISABLE KEYS */;
+INSERT INTO `ci_sessions` (`session_id`, `ip_address`, `user_agent`, `last_activity`, `user_data`) VALUES
+	('823bc3f80dd6e7591bf401fab67349bb', '::1', 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:28.0) Gecko/20100101 Firefox/28.0', 1398679768, 'a:2:{s:9:"user_data";s:0:"";s:7:"product";a:3:{i:0;a:7:{s:12:"product_name";s:11:"Equipment 1";s:10:"id_product";s:12:"RVFQTUFDXzE-";s:11:"number_item";s:3:"100";s:8:"location";s:7:"Jakarta";s:10:"start_date";s:14:"April 28, 2014";s:8:"end_date";s:12:"May 10, 2014";s:12:"special_note";s:0:"";}i:1;a:7:{s:12:"product_name";s:11:"Equipment 1";s:10:"id_product";s:12:"RVFQTUFDXzE-";s:11:"number_item";s:3:"100";s:8:"location";s:7:"Jakarta";s:10:"start_date";s:14:"April 28, 2014";s:8:"end_date";s:12:"May 10, 2014";s:12:"special_note";s:0:"";}i:2;a:8:{s:12:"product_name";s:11:"Equipment 1";s:10:"id_product";s:12:"RVFQTUFDXzE-";s:11:"number_item";s:3:"100";s:8:"location";s:7:"Jakarta";s:10:"start_date";s:14:"April 28, 2014";s:8:"end_date";s:12:"May 10, 2014";s:6:"submit";s:11:"Add to Cart";s:12:"special_note";s:0:"";}}}');
+/*!40000 ALTER TABLE `ci_sessions` ENABLE KEYS */;
+
+
 -- Dumping structure for table urentusmarketplace.company
 CREATE TABLE IF NOT EXISTS `company` (
   `idcompany` int(10) NOT NULL AUTO_INCREMENT,
@@ -293,7 +312,8 @@ INSERT INTO `industry` (`industrycode`, `industryname`, `createddate`, `createdi
 -- Dumping structure for table urentusmarketplace.inquiry
 CREATE TABLE IF NOT EXISTS `inquiry` (
   `idinquiry` int(10) NOT NULL AUTO_INCREMENT,
-  `idrentee` int(10) NOT NULL,
+  `companycode` varchar(50) NOT NULL,
+  `companyname` varchar(50) NOT NULL,
   `companyorderno` int(10) NOT NULL,
   `statusinquiry` varchar(50) NOT NULL,
   `freerequest` text,
@@ -515,7 +535,7 @@ CREATE TABLE IF NOT EXISTS `productlocation` (
   KEY `idequipment` (`idequipment`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.productlocation: ~3 rows (approximately)
+-- Dumping data for table urentusmarketplace.productlocation: ~2 rows (approximately)
 DELETE FROM `productlocation`;
 /*!40000 ALTER TABLE `productlocation` DISABLE KEYS */;
 INSERT INTO `productlocation` (`idproductlocation`, `idequipment`, `region`, `province`, `city`, `stock`) VALUES
@@ -740,7 +760,7 @@ CREATE TABLE IF NOT EXISTS `useraccess` (
   KEY `userid` (`userid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table urentusmarketplace.useraccess: ~2 rows (approximately)
+-- Dumping data for table urentusmarketplace.useraccess: ~0 rows (approximately)
 DELETE FROM `useraccess`;
 /*!40000 ALTER TABLE `useraccess` DISABLE KEYS */;
 INSERT INTO `useraccess` (`iduseraccess`, `companytype`, `companycode`, `companyname`, `userid`, `password`, `fullname`, `emailaddress`, `usertype`, `isactive`, `createddate`, `createdip`, `createdby`, `updateddate`, `updatedip`, `updatedby`) VALUES

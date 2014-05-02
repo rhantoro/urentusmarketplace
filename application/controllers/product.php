@@ -33,7 +33,7 @@ class Product extends CI_Controller {
 	
 	public function shopping_cart() {
 		//print_r($this->input->post());
-		
+		//print_r($this->session->userdata);
 		
 		if ($this->session->userdata('product') != null) {
 			
@@ -68,10 +68,12 @@ class Product extends CI_Controller {
 	}
 	
 	public function notification() {
+		//print_r($this->session->userdata('product'));
+		
 		$result = $this->product_model->submitInquiry();
 		
 		$this->load->view('templates/header');
-		$this->load->view('product/shoppingcart');
+		$this->load->view('product/shoppingcart', $result);
 		$this->load->view('templates/footer');
 	}
 }

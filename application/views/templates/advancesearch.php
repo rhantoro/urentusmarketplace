@@ -104,6 +104,7 @@
         <h5 class="col-md-12" id="product_select">Product : </h5>
 		<form name="frmAdvanceSearchUser" id="frmAdvanceSearchUser" method="post" action="search/result/">
 		<input type="hidden" name="product_input" id="product_input" class="form-control" value=""/>
+		<input type="hidden" name="modes" id="modes" class="form-control" value="public"/>
 		<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" style="margin-bottom:30px;" id="div_preference">
 			 <select class="form-control" name="preference"> <option value="New">New</option> <option value="Used">Used</option><option value="Rent">Rent</option></select>
 		</div>
@@ -122,7 +123,7 @@
 		<div class="col-lg-6 col-md-4 col-sm-6 col-xs-12" style="margin-bottom:30px;">
 			<div id="the-location"><input type="text" name="location" id="location" size="40" class="typeahead form-control" placeholder="Please Type Location"></div>
 		</div>
-        
+        <div class="col-md-10" id="msg"></div>
 		<div class="col-md-3">						
 			<input class="form-control btn btn-primary" type="submit" name="submit" value="Find">
 		</div>

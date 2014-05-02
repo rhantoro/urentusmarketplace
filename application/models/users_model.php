@@ -26,7 +26,8 @@ class Users_model extends CI_Model {
 		
 		
 		$query = $this->db->get();
-		//echo $this->db->last_query();		
+		//echo $this->db->last_query();
+				
 		if (count($query->result()) > 0) {
 			return $query->result();
 		} else {

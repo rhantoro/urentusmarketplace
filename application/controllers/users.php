@@ -23,6 +23,7 @@ class Users extends CI_Controller {
 		$isAuthenticate = false;
 		
 		$user = $this->users_model->authenticate($postData['logintype'], $postData['emailaddress'], $postData['password']);
+		//die();
 		
 		if ($user != false) {
 			$userData = array(

@@ -112,14 +112,13 @@ $(document).ready(function() {
 			$('#div_preference').hide();
 		});
 		
-		$('#find_submit').click(function(e) {
-			$('#frmAdvanceSearchUser').submit(function(){
-				 //alert( "Handler for .submit() called." );
-				
-		    })
-		    
-
-			return false;		
+		$('#frmAdvanceSearchUser').submit(function( event ) {
+			if ( $('#product_input').val() == "") {
+				$('#msg').html("Please select product first").show().fadeOut( 3000 );
+				return false;
+			} else {			 	
+				return true;				
+			}
 		});
 		
 })
