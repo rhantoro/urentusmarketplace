@@ -399,3 +399,50 @@ ERROR - 2014-05-02 12:43:22 --> 404 Page Not Found --> assets
 ERROR - 2014-05-02 12:43:24 --> Language file contains no data: language/english/english_lang.php
 ERROR - 2014-05-02 12:43:24 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
 ERROR - 2014-05-02 12:43:25 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 12:51:25 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 12:51:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 12:51:26 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 12:58:04 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 12:58:04 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 12:58:04 --> Severity: Notice  --> mysql_pconnect(): send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
+ D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:00:45 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:00:45 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:03:22 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:03:22 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:03:41 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:03:41 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:03:41 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:03:44 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:03:44 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:03:44 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:03:46 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:03:47 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:03:47 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:03:49 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:03:49 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:03:49 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:04:27 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:04:27 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:04:28 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:05:01 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:05:01 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:05:01 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:09 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:06:09 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:06:10 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:21 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:06:21 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:06:21 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:25 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:06:25 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:06:25 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:28 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:06:28 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:06:28 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:31 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:37 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:40 --> Language file contains no data: language/english/english_lang.php
+ERROR - 2014-05-02 13:06:40 --> Severity: 8192  --> mysql_pconnect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\xampp\htdocs\urentusmarketplace\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2014-05-02 13:06:40 --> 404 Page Not Found --> assets
+ERROR - 2014-05-02 13:06:43 --> 404 Page Not Found --> assets

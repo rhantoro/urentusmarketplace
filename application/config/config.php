@@ -357,6 +357,14 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
+/*
+ * Additional Config
+ * Rows per Page
+ */
+
+$config['row_per_page'] = 5;
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
+
+

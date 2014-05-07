@@ -52,7 +52,7 @@ class Search extends CI_Controller {
 		);
 		$config['base_url'] =  base_url().'/search/result/';
 		$config['total_rows'] = $result['count_all'];
-		$config['per_page'] = 5;
+		$config['per_page'] = $this->config->item('row_per_page');
 		$config['full_tag_open'] = '<ul id="pg-php" class="paging">';
 		$config['full_tag_close'] = '</ul>';
 		$config['cur_tag_open'] = '<a class="on">';

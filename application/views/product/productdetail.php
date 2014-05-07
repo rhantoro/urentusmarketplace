@@ -214,8 +214,7 @@
             
             <div class="col-md-12 add_bottom_15">
             
-                <div class="col-md-6 add_bottom_5">
-                						
+                <div class="col-md-6 add_bottom_5">                						
                 	<input class="form-control btn btn-primary" type="submit" name="submit" value="Add to Cart">
                     
                 </div>

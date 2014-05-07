@@ -138,4 +138,27 @@ class Product_model extends CI_Model {
 		return $result;
 		
 	}
+
+	public function compareProductById($product='EQPMAC',$idProduct) {
+		$returnValue = array();
+		if (isset($idProduct)) {
+			if ($product != "COMPAR" ) {
+				$this->db->select('idequipment, filteroptioncode, equipmentname, company.companycode, company.companyname, searchpreference, categorycode, subcategorycode, attachmenttoolcode, brandcode, modelcode, capacity, yearmade,
+						hourmeter, specification, description, price, companyaddress, website, companyemailaddress, companyofficephone, mainphoto_middle, mainphoto_thumb ')
+						->from('productitem')
+						->join('company','productitem.companycode = company.companycode','inner')
+						->where_in('idequipment' , $idProduct);
+				
+				$query = $this->db->get();
+				
+				$returnValue = array(
+						'data' => $query->result()
+				);
+				
+			} else {
+				//todo
+			}
+		}
+		return $returnValue;
+	}
 }

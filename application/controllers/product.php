@@ -68,12 +68,40 @@ class Product extends CI_Controller {
 	}
 	
 	public function notification() {
-		//print_r($this->session->userdata('product'));
-		
+		//print_r($this->session->userdata('product'));		
 		$result = $this->product_model->submitInquiry();
 		
 		$this->load->view('templates/header');
 		$this->load->view('product/shoppingcart', $result);
+		$this->load->view('templates/footer');
+	}
+	
+	public function comparison() {
+		$result = array();
+		if ($this->input->post() != null) {
+			$inputt = $this->input->post('id_checks');
+			$arrInput = explode(';', $inputt);
+			$x = 0;
+			foreach ($arrInput as $pair) {
+				$code_id = decode_url($pair);
+				
+				$prodCode = explode("_", $code_id);	
+				$prod = $prodCode[0];	
+				for ($i=1; $i < sizeof($prodCode); $i++) {
+					$idproduct[$x] = $prodCode[$i];
+				}
+				$x++;
+			}			
+			
+			//echo $prod;
+			$result = $this->product_model->compareProductById($prod,$idproduct);
+			//print_r($result);
+		} else {
+			$result = array();
+		}
+		
+		$this->load->view('templates/header');
+		$this->load->view('product/comparison',$result);
 		$this->load->view('templates/footer');
 	}
 }
